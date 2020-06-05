@@ -2,6 +2,11 @@ package currency
 
 type ARS int64
 
+// ToARS takes a float64 and converts it into ARS
+func ToARS(f float64) ARS {
+	return ARS(f * 100)
+}
+
 // Float64 converts a ARS to float64
 func (a ARS) Float64() float64 {
 	x := float64(a)
